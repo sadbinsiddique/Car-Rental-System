@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Profile | Car Rental System</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <main class="edit-profile-container">
+    <form id="editProfileForm" class="edit-profile-form" enctype="multipart/form-data" novalidate>
+      <h2>Edit Profile</h2>
+      <div class="avatar-upload-group">
+        <label for="avatarInput">Avatar</label>
+        <div class="avatar-preview-wrapper">
+          <img src="assets/img/avatar-default.png" alt="Avatar Preview" id="avatarPreview" class="avatar-preview">
+          <input type="file" id="avatarInput" name="avatar" accept="image/*">
+        </div>
+        <span class="form-error" id="avatarError"></span>
+      </div>
+      <div class="form-group">
+        <label for="editName">Full Name</label>
+        <input type="text" id="editName" name="name" required>
+        <span class="form-error" id="editNameError"></span>
+      </div>
+      <div class="form-group">
+        <label for="editPhone">Phone</label>
+        <input type="tel" id="editPhone" name="phone" required pattern="[0-9\-\+\s\(\)]{7,}">
+        <span class="form-error" id="editPhoneError"></span>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn-primary">Save Changes</button>
+        <a href="profile.html" class="btn-secondary">Cancel</a>
+      </div>
+      <span class="form-error" id="editProfileGeneralError"></span>
+    </form>
+    <form id="changePasswordForm" class="change-password-form" novalidate>
+      <h3>Change Password</h3>
+      <div class="form-group password-group">
+        <label for="currentPassword">Current Password</label>
+        <input type="password" id="currentPassword" name="currentPassword" required autocomplete="current-password">
+        <button type="button" class="toggle-password" tabindex="-1" aria-label="Show password"></button>
+        <span class="form-error" id="currentPasswordError"></span>
+      </div>
+      <div class="form-group password-group">
+        <label for="newPassword">New Password</label>
+        <input type="password" id="newPassword" name="newPassword" required autocomplete="new-password">
+        <button type="button" class="toggle-password" tabindex="-1" aria-label="Show password"></button>
+        <span class="form-error" id="newPasswordError"></span>
+      </div>
+      <div class="form-group password-group">
+        <label for="confirmNewPassword">Confirm New Password</label>
+        <input type="password" id="confirmNewPassword" name="confirmNewPassword" required autocomplete="new-password">
+        <button type="button" class="toggle-password" tabindex="-1" aria-label="Show password"></button>
+        <span class="form-error" id="confirmNewPasswordError"></span>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn-primary">Change Password</button>
+      </div>
+      <span class="form-error" id="changePasswordGeneralError"></span>
+    </form>
+  </main>
+  <script src="assets/js/profile.js"></script>
+  <script src="assets/js/form-validation.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

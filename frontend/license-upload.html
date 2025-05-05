@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>License Upload | Car Rental System</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <main class="license-upload-container">
+    <form id="licenseForm" class="license-form" enctype="multipart/form-data" novalidate>
+      <h2>Upload or Scan Driver License</h2>
+      <div class="form-group">
+        <label for="licenseImage">License Image</label>
+        <input type="file" id="licenseImage" name="licenseImage" accept="image/*">
+        <div id="licenseImagePreview" class="license-image-preview"></div>
+      </div>
+      <button type="button" id="scanLicenseBtn" class="btn-secondary">Scan & Auto-Fill</button>
+      <div class="form-group">
+        <label for="licenseName">Full Name</label>
+        <input type="text" id="licenseName" name="licenseName" required>
+      </div>
+      <div class="form-group">
+        <label for="licenseDOB">Date of Birth</label>
+        <input type="date" id="licenseDOB" name="licenseDOB" required>
+      </div>
+      <div class="form-group">
+        <label for="licenseNumber">License Number</label>
+        <input type="text" id="licenseNumber" name="licenseNumber" required>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn-primary">Save</button>
+      </div>
+    </form>
+  </main>
+  <script src="assets/js/license-upload.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

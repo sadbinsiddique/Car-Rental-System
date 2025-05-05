@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Car Rental System</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    /* --- About Us Page Styles --- */
+    .about-hero {
+      min-height: 340px;
+      background: linear-gradient(120deg, #2563ebcc 0%, #38bdf8cc 100%), url('assets/img/about-hero.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      padding: 3.5rem 1rem 2.5rem 1rem;
+      position: relative;
+    }
+    .about-hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 0.7em;
+      letter-spacing: 0.01em;
+    }
+    .about-hero p {
+      font-size: 1.25rem;
+      max-width: 600px;
+      margin: 0 auto 1.5em auto;
+      font-weight: 400;
+    }
+    .about-hero-nav {
+      display: flex;
+      gap: 1.2em;
+      justify-content: center;
+      margin-top: 1.2em;
+      flex-wrap: wrap;
+    }
+    .about-hero-nav a {
+      color: #fff;
+      background: rgba(37,99,235,0.18);
+      border-radius: 22px;
+      padding: 0.5em 1.3em;
+      font-size: 1.08rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.18s, color 0.18s;
+    }
+    .about-hero-nav a:hover {
+      background: #fff;
+      color: #2563eb;
+    }
+    .about-sections {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 1rem 6rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    .about-section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 1.2rem;
+      text-align: center;
+    }
+    .about-cards-row {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .about-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 16px rgba(30,41,59,0.09);
+      padding: 2rem 1.5rem 1.5rem 1.5rem;
+      min-width: 260px;
+      max-width: 340px;
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.1rem;
+      transition: box-shadow 0.18s, transform 0.18s;
+      cursor: pointer;
+      position: relative;
+    }
+    .about-card:hover, .about-card:focus-within {
+      box-shadow: 0 8px 32px rgba(37,99,235,0.13);
+      transform: translateY(-4px) scale(1.03);
+      z-index: 2;
+    }
+    .about-card-icon {
+      font-size: 2.2rem;
+      margin-bottom: 0.3em;
+      color: #2563eb;
+    }
+    .about-card-title {
+      font-size: 1.18rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 0.2em;
+      text-align: center;
+    }
+    .about-card-desc {
+      font-size: 1.05rem;
+      color: #475569;
+      text-align: center;
+    }
+    /* Team cards */
+    .team-cards-row {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .team-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 16px rgba(30,41,59,0.09);
+      padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+      min-width: 220px;
+      max-width: 260px;
+      flex: 1 1 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.7rem;
+      transition: box-shadow 0.18s, transform 0.18s;
+      cursor: pointer;
+      position: relative;
+    }
+    .team-card:hover, .team-card:focus-within {
+      box-shadow: 0 8px 32px rgba(37,99,235,0.13);
+      transform: translateY(-4px) scale(1.03);
+      z-index: 2;
+    }
+    .team-card-img {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.5em;
+      border: 3px solid #e0e7ff;
+    }
+    .team-card-name {
+      font-size: 1.08rem;
+      font-weight: 600;
+      color: #2563eb;
+      margin-bottom: 0.1em;
+    }
+    .team-card-role {
+      font-size: 0.98rem;
+      color: #64748b;
+      margin-bottom: 0.2em;
+    }
+    .team-card-bio {
+      font-size: 0.98rem;
+      color: #475569;
+      text-align: center;
+      margin-top: 0.2em;
+      display: none;
+      transition: max-height 0.3s;
+    }
+    .team-card-bio.open {
+      display: block;
+      animation: fadeIn 0.3s;
+    }
+    .team-card-toggle {
+      background: none;
+      border: none;
+      color: #2563eb;
+      font-size: 1.1em;
+      cursor: pointer;
+      margin-top: 0.2em;
+      transition: color 0.18s;
+    }
+    .team-card-toggle:hover {
+      color: #1d4ed8;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    /* Footer */
+    .about-footer {
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      background: #1e293b;
+      color: #fff;
+      padding: 1.1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5em;
+      z-index: 100;
+    }
+    .about-footer-row {
+      display: flex;
+      gap: 2em;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    .about-footer-socials {
+      display: flex;
+      gap: 1.1em;
+      align-items: center;
+    }
+    .about-footer-socials a {
+      color: #38bdf8;
+      font-size: 1.3em;
+      text-decoration: none;
+      transition: color 0.18s;
+    }
+    .about-footer-socials a:hover {
+      color: #fff;
+    }
+    @media (max-width: 900px) {
+      .about-cards-row, .team-cards-row {
+        flex-direction: column;
+        gap: 1.2rem;
+        align-items: center;
+      }
+      .about-sections {
+        padding-bottom: 7rem;
+      }
+    }
+    @media (max-width: 600px) {
+      .about-hero h1 {
+        font-size: 1.6rem;
+      }
+      .about-hero p {
+        font-size: 1.02rem;
+      }
+      .about-section-title {
+        font-size: 1.2rem;
+      }
+      .about-card, .team-card {
+        min-width: 0;
+        max-width: 98vw;
+        padding: 1.1rem 0.7rem;
+        border-radius: 10px;
+      }
+      .about-footer {
+        padding: 0.7rem 0.3rem;
+        font-size: 0.97rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="about-hero">
+    <h1>About Car Rental System</h1>
+    <p>We make car rentals simple, flexible, and rewarding. Whether you’re traveling for business or adventure, our modern fleet and seamless booking experience get you on the road faster.</p>
+    <nav class="about-hero-nav">
+      <a href="#mission">Our Mission</a>
+      <a href="#how">How it Works</a>
+      <a href="#team">Meet the Team</a>
+    </nav>
+  </header>
+  <main class="about-sections">
+    <section id="mission">
+      <div class="about-section-title">Our Mission</div>
+      <div class="about-cards-row">
+        <div class="about-card" tabindex="0">
+          <div class="about-card-icon">🌍</div>
+          <div class="about-card-title">Accessible Mobility</div>
+          <div class="about-card-desc">We believe everyone deserves easy access to reliable transportation—anywhere, anytime.</div>
+        </div>
+        <div class="about-card" tabindex="0">
+          <div class="about-card-icon">💡</div>
+          <div class="about-card-title">Innovation</div>
+          <div class="about-card-desc">We use technology to streamline rentals, reduce wait times, and deliver a frictionless experience.</div>
+        </div>
+        <div class="about-card" tabindex="0">
+          <div class="about-card-icon">🤝</div>
+          <div class="about-card-title">Customer First</div>
+          <div class="about-card-desc">Our team is dedicated to your journey, offering support and rewards every step of the way.</div>
+        </div>
+      </div>
+    </section>
+    <section id="how">
+      <div class="about-section-title">How it Works</div>
+      <div class="about-cards-row">
+        <div class="about-card" tabindex="0">
+          <div class="about-card-icon">🔎</div>
+          <div class="about-card-title">Find Your Car</div>
+          <div class="about-card-desc">Browse our diverse fleet, filter by features, and choose the perfect ride for your needs.</div>
+        </div>
+        <div class="about-card" tabindex="0">
+          <div class="about-card-icon">⚡</div>
+          <div class="about-card-title">Book in Minutes</div>
+          <div class="about-card-desc">Reserve online with instant confirmation and flexible pickup options at multiple locations.</div>
+        </div>
+        <div class="about-card" tabindex="0">
+          <div class="about-card-icon">🚗</div>
+          <div class="about-card-title">Drive & Earn</div>
+          <div class="about-card-desc">Enjoy your trip and earn loyalty points for every booking, redeemable for exclusive rewards.</div>
+        </div>
+      </div>
+    </section>
+    <section id="team">
+      <div class="about-section-title">Meet the Team</div>
+      <div class="team-cards-row">
+        <div class="team-card" tabindex="0">
+          <img src="assets/img/team1.jpg" alt="Alex Kim" class="team-card-img">
+          <div class="team-card-name">Alex Kim</div>
+          <div class="team-card-role">Founder & CEO</div>
+          <button class="team-card-toggle" aria-expanded="false">Show Bio</button>
+          <div class="team-card-bio">Alex is passionate about mobility and technology, with 15+ years in the travel industry. He leads the team with a vision for seamless journeys.</div>
+        </div>
+        <div class="team-card" tabindex="0">
+          <img src="assets/img/team2.jpg" alt="Priya Singh" class="team-card-img">
+          <div class="team-card-name">Priya Singh</div>
+          <div class="team-card-role">Head of Operations</div>
+          <button class="team-card-toggle" aria-expanded="false">Show Bio</button>
+          <div class="team-card-bio">Priya ensures every rental runs smoothly, focusing on customer satisfaction and operational excellence across all locations.</div>
+        </div>
+        <div class="team-card" tabindex="0">
+          <img src="assets/img/team3.jpg" alt="Carlos Rivera" class="team-card-img">
+          <div class="team-card-name">Carlos Rivera</div>
+          <div class="team-card-role">Lead Engineer</div>
+          <button class="team-card-toggle" aria-expanded="false">Show Bio</button>
+          <div class="team-card-bio">Carlos builds the tech that powers our platform, from booking flows to loyalty rewards, always with a focus on user experience.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="about-footer">
+    <div class="about-footer-row">
+      <span>Contact: <a href="mailto:support@carrentalsystem.com" style="color:#38bdf8;">support@carrentalsystem.com</a></span>
+      <span>Phone: <a href="tel:+1234567890" style="color:#38bdf8;">+1 234 567 890</a></span>
+    </div>
+    <div class="about-footer-socials">
+      <a href="#" aria-label="Twitter"><span>🐦</span></a>
+      <a href="#" aria-label="Facebook"><span>📘</span></a>
+      <a href="#" aria-label="Instagram"><span>📸</span></a>
+      <a href="#" aria-label="LinkedIn"><span>💼</span></a>
+    </div>
+    <div style="font-size:0.97em;opacity:0.7;">&copy; 2025 Car Rental System</div>
+  </footer>
+  <script>
+    // Smooth scroll for hero nav links
+    document.querySelectorAll('.about-hero-nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+    // Toggle team member bios
+    document.querySelectorAll('.team-card-toggle').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const bio = this.nextElementSibling;
+        const isOpen = bio.classList.toggle('open');
+        this.textContent = isOpen ? 'Hide Bio' : 'Show Bio';
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+  </script>
+</body>
+</html>

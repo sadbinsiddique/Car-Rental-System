@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard | Car Rental System</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <main class="dashboard-container">
+    <section class="dashboard-header">
+      <h2>Welcome Back!</h2>
+      <div class="dashboard-points">
+        <span class="points-label">Loyalty Points:</span>
+        <span id="dashboardPoints" class="points-value">0</span>
+        <a href="loyalty.html" class="btn-secondary points-link">View Rewards</a>
+      </div>
+    </section>
+    <section class="dashboard-quick-links">
+      <a href="profile.html" class="quick-link-card">Profile</a>
+      <a href="booking.html" class="quick-link-card">New Booking</a>
+      <a href="activity-log.html" class="quick-link-card">My Bookings</a>
+      <a href="contact.html" class="quick-link-card">Support</a>
+    </section>
+    <section class="dashboard-recent-bookings">
+      <h3>Recent Bookings</h3>
+      <table class="recent-bookings-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Vehicle</th>
+            <th>Status</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody id="recentBookingsBody">
+          <!-- Populated by JS -->
+        </tbody>
+      </table>
+      <div id="noRecentBookings" class="no-results" style="display:none;">No recent bookings found.</div>
+    </section>
+  </main>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
