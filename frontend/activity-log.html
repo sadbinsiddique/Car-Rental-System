@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Log | Car Rental System</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <h1>Activity Log</h1>
+    </header>
+    <main class="activity-log-container">
+        <section class="activity-log-controls">
+            <input type="text" id="searchInput" placeholder="Search activities...">
+            <select id="activityTypeFilter">
+                <option value="all">All Types</option>
+                <option value="login">Login</option>
+                <option value="booking">Booking</option>
+                <option value="return">Return</option>
+                <option value="payment">Payment</option>
+                <option value="damage">Damage Report</option>
+                <option value="edit">Edit Profile</option>
+            </select>
+            <label for="dateFrom">From:</label>
+            <input type="date" id="dateFrom">
+            <label for="dateTo">To:</label>
+            <input type="date" id="dateTo">
+            <button type="button" id="exportCsvBtn" class="btn-secondary">Export to CSV</button>
+        </section>
+        <section class="activity-log-table-section">
+            <table class="activity-log-table">
+                <thead>
+                    <tr>
+                        <th data-sort="date">Date</th>
+                        <th data-sort="type">Type</th>
+                        <th data-sort="description">Description</th>
+                        <th data-sort="status">Status</th>
+                    </tr>
+                </thead>
+                <tbody id="activityLogBody">
+                    <!-- Activities will be rendered here by JS -->
+                </tbody>
+            </table>
+            <div id="noResults" class="no-results" style="display:none;">No activities found.</div>
+        </section>
+    </main>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/activity-log.js"></script>
+</body>
+</html>

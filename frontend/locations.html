@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Branch Finder | Car Rental System</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <main class="locations-container">
+    <h2>Find a Branch</h2>
+    <div class="locations-search-bar">
+      <input type="text" id="branchSearchInput" placeholder="Search by city or airport...">
+    </div>
+    <section id="branchList" class="branch-list">
+      <!-- Branch cards rendered by JS -->
+    </section>
+    <div id="mapModal" class="modal" style="display:none;">
+      <div class="modal-content map-modal-content">
+        <span class="close-modal" id="closeMapModal">&times;</span>
+        <h3 id="modalBranchName"></h3>
+        <img id="modalMapImg" src="" alt="Branch Map" class="modal-map-img">
+        <div id="modalBranchAddress"></div>
+      </div>
+    </div>
+  </main>
+  <script src="assets/js/locations.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

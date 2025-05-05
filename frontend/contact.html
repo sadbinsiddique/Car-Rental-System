@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Car Rental System</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <main class="contact-container">
+    <form id="contactForm" class="contact-form" novalidate>
+      <h2>Contact Us</h2>
+      <div class="form-group">
+        <label for="contactName">Name</label>
+        <input type="text" id="contactName" name="contactName" required>
+        <span class="form-error" id="contactNameError"></span>
+      </div>
+      <div class="form-group">
+        <label for="contactEmail">Email</label>
+        <input type="email" id="contactEmail" name="contactEmail" required>
+        <span class="form-error" id="contactEmailError"></span>
+      </div>
+      <div class="form-group">
+        <label for="contactSubject">Subject</label>
+        <input type="text" id="contactSubject" name="contactSubject" required>
+        <span class="form-error" id="contactSubjectError"></span>
+      </div>
+      <div class="form-group">
+        <label for="contactMessage">Message</label>
+        <textarea id="contactMessage" name="contactMessage" rows="5" required></textarea>
+        <span class="form-error" id="contactMessageError"></span>
+      </div>
+      <div class="form-group captcha-group">
+        <label id="captchaLabel"></label>
+        <input type="text" id="captchaInput" name="captchaInput" required autocomplete="off" placeholder="Enter answer">
+        <span class="form-error" id="captchaError"></span>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn-primary">Send Message</button>
+      </div>
+      <div id="contactSuccessMsg" class="success-msg" style="display:none;">Thank you! Your message has been sent.</div>
+    </form>
+  </main>
+  <script src="assets/js/contact.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

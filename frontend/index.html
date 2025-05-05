@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Rental System</title>
+  <style>
+    /* Reset & Box‐sizing */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography & Base */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f9f9f9;
+}
+h1, h2, h3 {
+  color: #222;
+}
+a {
+  text-decoration: none;
+}
+
+/* Utility */
+.container {
+  width: min(90%, 1200px);
+  margin-inline: auto;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: .75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background .2s ease;
+}
+.btn-primary {
+  background: #0078d4;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #005a9e;
+}
+.btn-secondary {
+  background: #e1e1e1;
+  color: #333;
+}
+.btn-secondary:hover {
+  background: #cacaca;
+}
+
+/* Header / Hero */
+.hero-section {
+  background: url('../img/hero-bg.jpg') center/cover no-repeat #004b8d;
+  color: #fff;
+  text-align: center;
+  padding: 6rem 1rem;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: .5rem;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.hero-cta > a + a {
+  margin-left: 1rem;
+}
+
+/* Features Overview */
+.features-overview {
+  padding: 4rem 1rem;
+  background: #fff;
+  text-align: center;
+}
+.features-overview h2 {
+  margin-bottom: 2rem;
+}
+.features-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.feature-card {
+  background: #f1f1f1;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  transition: transform .2s ease;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+.feature-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: .5rem;
+}
+
+/* Testimonials */
+.testimonials-section {
+  padding: 4rem 1rem;
+}
+.testimonials-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.testimonials-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.testimonial-card {
+  background: #fff;
+  border-left: 4px solid #0078d4;
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+.testimonial-author {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Call to Action */
+.cta-section {
+  background: #0078d4;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.cta-btn {
+  margin: .5rem;
+}
+
+/* Footer */
+.main-footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: #222;
+  color: #ccc;
+  font-size: .9rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+}
+  </style>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1>Drive Your Journey</h1>
+      <p>Modern, flexible car rentals for every adventure. Book in minutes, drive with confidence.</p>
+      <div class="hero-cta">
+        <a href="booking.html" class="btn-primary">Book a Car</a>
+        <a href="signup.html" class="btn-secondary">Sign Up</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="features-overview">
+      <h2>Why Choose Us?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon">🚗</span>
+          <h3>Wide Vehicle Selection</h3>
+          <p>From economy to luxury, find the perfect car for your needs.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🔒</span>
+          <h3>Safe & Secure</h3>
+          <p>Comprehensive insurance and 24/7 support for peace of mind.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">⚡</span>
+          <h3>Fast Booking</h3>
+          <p>Book online in minutes with instant confirmation and flexible options.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">💰</span>
+          <h3>Transparent Pricing</h3>
+          <p>No hidden fees. See your total before you book.</p>
+        </div>
+      </div>
+    </section>
+    <section class="testimonials-section">
+      <h2>What Our Customers Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p>“Booking was a breeze and the car was spotless. Highly recommend!”</p>
+          <span class="testimonial-author">— Emily R.</span>
+        </div>
+        <div class="testimonial-card">
+          <p>“Great prices and friendly staff. The loyalty rewards are a nice bonus!”</p>
+          <span class="testimonial-author">— Carlos M.</span>
+        </div>
+        <div class="testimonial-card">
+          <p>“Needed a car last minute and got it in 5 minutes. Super convenient!”</p>
+          <span class="testimonial-author">— Priya S.</span>
+        </div>
+      </div>
+    </section>
+    <section class="cta-section">
+      <h2>Ready to Hit the Road?</h2>
+      <a href="booking.html" class="btn-primary cta-btn">Book Now</a>
+      <a href="signup.html" class="btn-secondary cta-btn">Join & Save</a>
+    </section>
+  </main>
+  <footer class="main-footer">
+    <p>&copy; 2025 Car Rental System. All rights reserved.</p>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

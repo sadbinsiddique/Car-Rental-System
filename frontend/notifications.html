@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications | Car Rental System</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <header class="notifications-header">
+    <div class="notification-bell-wrapper">
+      <span id="notificationBell" class="notification-bell">
+        <span class="bell-icon">🔔</span>
+        <span id="unreadBadge" class="unread-badge">0</span>
+      </span>
+      <div id="notificationDropdown" class="notification-dropdown" style="display:none;">
+        <ul id="dropdownList">
+          <!-- Populated by JS -->
+        </ul>
+        <a href="notifications.html" class="dropdown-view-all">View All</a>
+      </div>
+    </div>
+    <h2>Notifications</h2>
+  </header>
+  <main class="notifications-container">
+    <section class="notifications-list-section">
+      <button id="markAllReadBtn" class="btn-secondary">Mark All as Read</button>
+      <ul id="notificationsList" class="notifications-list">
+        <!-- Populated by JS -->
+      </ul>
+      <div id="noNotificationsMsg" class="no-results" style="display:none;">No notifications.</div>
+    </section>
+  </main>
+  <script src="assets/js/notifications.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
