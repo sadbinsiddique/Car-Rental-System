@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Car Rental System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/auth-style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="auth-header">
+        <nav>
+            <div class="nav__header">
+                <div class="nav__logo">
+                    <a href="../index.php" class="logo">
+                        <img src="assets/logo-white.png" alt="logo" class="logo-white" />
+                        <img src="assets/logo-dark.png" alt="logo" class="logo-dark" />
+                        <span>Car Rental</span>
+                    </a>
+                </div>
+                <div class="nav__menu__btn" id="menu-btn">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+            <ul class="nav__links" id="nav-links">
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html" class="active">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="auth-container">
+            <h2>Create Your Account</h2>
+            
+            <!-- Replace PHP error display with JavaScript -->
+            <div class="alert alert-danger" id="error-message" style="display: none;"></div>
+            
+            <form method="post" action="../controller/signupCheck.php">
+                <div class="form-group">
+                    <label for="username">Username *</label>
+                    <input type="text" id="username" name="username" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="full_name">Full Name</label>
+                    <input type="text" id="full_name" name="full_name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <div class="password-field">
+                        <input type="password" id="password" name="password" class="form-control" required>
+                        <span class="password-toggle">
+                            <i class="ri-eye-line"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" class="form-control" rows="2"></textarea>
+                </div>
+                <button type="submit" name="submit" class="btn">Sign Up</button>
+            </form>
+            <div class="auth-links">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="footer__logo">
+            <a href="../index.php" class="logo">
+              <img src="assets/logo-white.png" alt="logo" />
+              <span>Car Rental</span>
+            </a>
+          </div>
+          <p>
+            We are here to provide you with the best vehicles and a seamless rental experience.
+            Stay tuned for updates, special offers, and more.
+            Drive with confidence!
+          </p>
+          <ul class="footer__socials">
+            <li><a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a></li>
+            <li><a href="#" aria-label="Twitter"><i class="ri-twitter-fill"></i></a></li>
+            <li><a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a></li>
+            <li><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a></li>
+            <li><a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="../index.php"><i class="ri-arrow-right-s-line"></i> Home</a></li>
+            <li><a href="login.html"><i class="ri-arrow-right-s-line"></i> Login</a></li>
+            <li><a href="signup.html"><i class="ri-arrow-right-s-line"></i> Sign Up</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Car Models</h4>
+          <ul class="footer__links">
+            <li><a href="#"><i class="ri-arrow-right-s-line"></i> Toyota Corolla</a></li>
+            <li><a href="#"><i class="ri-arrow-right-s-line"></i> Tesla Model S</a></li>
+            <li><a href="#"><i class="ri-arrow-right-s-line"></i> Honda City</a></li>
+            <li><a href="#"><i class="ri-arrow-right-s-line"></i> Mitsubishi Pajero</a></li>
+            <li><a href="#"><i class="ri-arrow-right-s-line"></i> Mazda CX-5</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact Us</h4>
+          <ul class="footer__links">
+            <li>
+              <a href="#">
+                <span><i class="ri-phone-fill"></i></span> +880 1345678910
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span><i class="ri-map-pin-fill"></i></span> Dhaka, Bangladesh
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span><i class="ri-mail-fill"></i></span> info@carrentalsystem.com
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span><i class="ri-time-fill"></i></span> Mon-Fri: 9:00 AM - 6:00 PM
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bar">
+        <p>
+          &copy; <span id="year"></span>
+          <a href="https://github.com/sadbinsiddique/Car-Rental-System" target="_blank" rel="noopener noreferrer">
+            Web Technology Project
+          </a>. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="auth.js"></script>
+</body>
+</html>
