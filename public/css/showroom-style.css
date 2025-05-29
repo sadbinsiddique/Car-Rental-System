@@ -1,0 +1,74 @@
+/* Placeholder for showroom specific styles */
+.showroom__container {
+    padding-top: 2rem; /* Add some space above the showroom section */
+}
+
+
+
+.showroom__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.showroom__card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.showroom__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.showroom__card img {
+    width: 100%;
+    height: 200px; /* Adjust as needed */
+    object-fit: cover;
+}
+
+.showroom__card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    padding: 1rem 1rem 0.5rem 1rem;
+    text-align: center;
+}
+
+.showroom__card p {
+    font-size: 0.9rem;
+    color: #555;
+    padding: 0 1rem 1rem 1rem;
+    text-align: center;
+    min-height: 60px; /* Give some space for description */
+}
+
+.showroom__card hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 0 1rem;
+}
+
+.showroom__card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f9f9f9;
+}
+
+.showroom__card__footer h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.showroom__card__footer .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+
