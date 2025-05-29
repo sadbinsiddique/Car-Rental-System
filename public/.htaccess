@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Serve static files directly (CSS, JS, Images)
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Route all other requests to index.php
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
