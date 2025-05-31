@@ -2,6 +2,7 @@
 $title = "Forgot Password - Car Rental";
 $showNavigation = false;
 $showFooter = false;
+$additionalCSS = ['css/forgot_password.css'];
 
 ob_start();
 ?>
@@ -46,138 +47,6 @@ ob_start();
         </div>
     </div>
 </div>
-
-<style>
-.auth-container {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 20px;
-}
-
-.auth-card {
-    background: white;
-    border-radius: 15px;
-    padding: 40px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 400px;
-}
-
-.auth-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.auth-logo {
-    height: 60px;
-    margin-bottom: 20px;
-}
-
-.auth-header h2 {
-    color: #333;
-    margin-bottom: 10px;
-    font-size: 1.8rem;
-}
-
-.auth-header p {
-    color: #666;
-    font-size: 0.9rem;
-}
-
-.alert {
-    padding: 12px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    font-size: 0.9rem;
-}
-
-.alert-error {
-    background: #fee;
-    color: #c53030;
-    border: 1px solid #fecaca;
-}
-
-.alert-success {
-    background: #f0fff4;
-    color: #2d7d32;
-    border: 1px solid #c6f6d5;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    color: #333;
-    font-weight: 500;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #e2e8f0;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus {
-    outline: none;
-    border-color: #667eea;
-}
-
-.btn {
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-}
-
-.btn-full {
-    width: 100%;
-    justify-content: center;
-}
-
-.auth-links {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.link-secondary {
-    color: #666;
-    text-decoration: none;
-    font-size: 0.9rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.link-secondary:hover {
-    color: #333;
-}
-</style>
 
 <?php
 $content = ob_get_clean();
